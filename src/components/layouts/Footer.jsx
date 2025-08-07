@@ -111,11 +111,11 @@ function Footer() {
             </h2>
             <div className="grid grid-cols-3 gap-2 max-w-[180px] mx-auto md:mx-0">
               {Array.from({ length: 6 }).map((_, index) => (
-                <div key={index} className="group cursor-pointer">
+                <div key={index} className="">
                   <img
                     src={insta}
                     alt={`Instagram ${index + 1}`}
-                    className="w-[50px] h-[50px] object-cover border-2 border-gray-600 group-hover:border-orange-500 transition-colors rounded-sm"
+                    className="w-[50px] h-[50px] object-cover border-2 border-white bottom-8 transition-colors rounded-sm"
                   />
                 </div>
               ))}
