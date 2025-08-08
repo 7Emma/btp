@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 import slider from "../assets/images/slider-bg.jpg";
-import s1 from "../assets/images/services/s1.png";
-import s2 from "../assets/images/services/s2.png";
-import s3 from "../assets/images/services/s3.png";
-import s4 from "../assets/images/services/s4.png";
+import services from "../data/services";
 import maçon from "../assets/images/about-img.jpg";
 
 function Home() {
@@ -58,12 +55,7 @@ function Home() {
 
           {/* Grille des services */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { img: s1, title: "SERVICES DE CONSTRUCTION" },
-              { img: s2, title: "MODÉLISATION DE BÂTIMENTS" },
-              { img: s3, title: "PRÉ-CONSTRUCTION" },
-              { img: s4, title: "GESTION DE PROJET" },
-            ].map((service, index) => (
+            {services.map((service, index) => (
               <div
                 key={index}
                 className="group text-center bg-white rounded-lg p-6 shadow-sm hover:shadow-xl transition-all duration-300"
@@ -84,9 +76,7 @@ function Home() {
 
                 {/* Description */}
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                  Le fait qu'un lecteur soit distrait par le contenu lisible
-                  d'une page lorsqu'il examine sa mise en page. L'intérêt
-                  d'utiliser L
+                  {service.short}
                 </p>
 
                 {/* Lien */}
