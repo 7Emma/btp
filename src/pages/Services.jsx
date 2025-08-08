@@ -8,7 +8,7 @@ function Service() {
     <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 ">
       <div className="max-w-7xl mx-auto shadow-2xl flex flex-col gap-6">
         {/* En-tête */}
-        <div className="max-w-3xl mx-auto mb-12">
+        <div className="max-w-3xl mx-auto mb-12 p-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Nos Services
           </h2>
@@ -41,7 +41,7 @@ function Service() {
               </div>
 
               {/* Titre */}
-              <h3 className="text-lg font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors duration-300">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors duration-300 uppercase">
                 {service.title}
               </h3>
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import {
   Phone,
   Mail,
-  Locate,
+  MapPin,
   Facebook,
   Linkedin,
   Twitter,
@@ -82,7 +82,7 @@ function Head() {
           <div className="flex items-center gap-1 group">
             <div className="bg-white p-1">
               {" "}
-              <Locate
+              <MapPin
                 size={20}
                 className="text-orange-500 group-hover:text-black"
               />
