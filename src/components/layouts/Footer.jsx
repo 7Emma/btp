@@ -18,7 +18,7 @@ function Footer() {
     <footer className="bg-[#252525] text-white">
       {/* Section contact supérieure */}
       <div className="px-4 sm:px-6 lg:px-8 py-6 border-b border-gray-800">
-        <div className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-center items-center gap-8 text-sm sm:text-base">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-center items-center gap-10 text-sm sm:text-base">
           {/* ÉLÉMENT 1 */}
           <div className="flex flex-col items-center gap-1 group hover:cursor-pointer text-center">
             <Phone
@@ -55,7 +55,7 @@ function Footer() {
       </div>
 
       {/* Contenu principal du footer */}
-      <div className="px-4 sm:px-6 lg:px-8 py-8">
+      <div className="px-4 sm:px-6 lg:px-8 py-8 mx-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Liens rapides */}
           <div className="text-center md:text-left">
@@ -131,7 +131,7 @@ function Footer() {
               <input
                 type="email"
                 placeholder="Votre adresse email"
-                className="w-full px-4 py-3 bg-white border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors"
+                className="px-4 py-3 w-full bg-white border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors"
               />
               <button className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-lg transition-colors">
                 S'abonner
