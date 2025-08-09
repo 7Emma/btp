@@ -2,9 +2,18 @@ import { useEffect, useState, useRef } from "react";
 import slider from "../assets/images/slider-bg.jpg";
 import services from "../data/services";
 import maçon from "../assets/images/about-img.jpg";
-import maison from "../assets/images/projects/project1.jpg"
+import maison1 from "../assets/images/projects/project1.jpg"
+import maison2 from "../assets/images/projects/project2.jpg"
+import maison3 from "../assets/images/projects/project3.jpg"
+import maison4 from "../assets/images/projects/project4.jpg"
+import maison5 from "../assets/images/projects/project5.jpg"
+import maison6 from "../assets/images/projects/project6.jpg"
 import background from "../assets/images/client/client-bg.jpg"
 import clt from "../assets/images/client/client.jpg"
+import w1 from "../assets/images/w/w1.png"
+import w2 from "../assets/images/w/w2.png"
+import w3 from "../assets/images/w/w3.png"
+import Contact from "./Contact";
 
 function Home() {
   return (
@@ -145,6 +154,56 @@ function Home() {
         </div>
       </div>
       <Carousselle2 />
+      <div className="max-w-4xl mx-auto my-16 px-4">
+  <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us?</h2>
+
+  <div className="space-y-8">
+    {/* Item */}
+    {[
+      { img: w1, title: "Project done on time" },
+      { img: w2, title: "Always available" },
+      { img: w3, title: "Professional and responsible" }
+    ].map((item, index) => (
+      <div
+        key={index}
+        className="flex flex-col md:flex-row items-center md:items-start gap-6"
+      >
+        {/* Icône avec flèche */}
+        <div className="relative">
+          <div className="bg-orange-500 w-24 h-24 flex items-center justify-center">
+            <img src={item.img} alt={item.title} className="w-10 h-10" />
+          </div>
+          {/* Pointe */}
+          <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:-right-3 md:top-1/2 md:-translate-y-1/2 
+                          w-0 h-0 border-l-[12px] border-l-transparent border-t-[12px] md:border-t-transparent md:border-l-orange-500 
+                          border-t-orange-500 md:border-t-[12px] md:border-l-[12px]">
+          </div>
+        </div>
+
+        {/* Texte */}
+        <div>
+          <h3 className="text-xl font-bold">{item.title}</h3>
+          <p className="text-gray-700">
+            Lorem Ipsum is not simply random text. It has roots in a piece of
+            classical Latin literature from 45 BC, making it over 2000 years
+            old. Richard McClintock, a Latin professor at Hampden-Sydney
+            College in Virginia, looked up one of the more obscure Latin words,
+            consectetur, from a Lorem Ipsum passage.
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  {/* Bouton */}
+  <div className="text-center mt-10">
+    <button className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition">
+      Read More
+    </button>
+  </div>
+</div>
+  <Contact />
+
     </div>
   );
 }
@@ -158,37 +217,37 @@ function Carousselle() {
   const projects = [
     {
       id: 1,
-      image: maison,
+      image: maison1,
       title: "Travaux intérieur",
       description: "Une altération sous une forme ou une autre, projection d'humour ou pas des mots aléatoires qui ne paraissent pas crédibles."
     },
     {
       id: 2,
-      image: maison,
+      image: maison2,
       title: "Rénovation extérieure",
       description: "Transformation complète de façades avec des matériaux modernes et durables pour un rendu exceptionnel."
     },
     {
       id: 3,
-      image: maison,
+      image: maison3,
       title: "Construction neuve",
       description: "Projets de construction de maisons individuelles avec des designs contemporains et éco-responsables."
     },
     {
       id: 4,
-      image: maison,
+      image: maison4,
       title: "Aménagement paysager",
       description: "Création d'espaces verts harmonieux alliant esthétique et fonctionnalité pour votre environnement."
     },
     {
       id: 5,
-      image: maison,
+      image: maison5,
       title: "Rénovation de toiture",
       description: "Expertise en rénovation et réparation de toitures avec des matériaux de haute qualité."
     },
     {
       id: 6,
-      image: maison,
+      image: maison6,
       title: "Isolation thermique",
       description: "Solutions d'isolation performantes pour améliorer le confort et réduire les consommations énergétiques."
     }
@@ -363,7 +422,7 @@ function Carousselle() {
         {currentIndex + 1} / {projects.length}
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fadeIn {
           from {
             opacity: 0;
