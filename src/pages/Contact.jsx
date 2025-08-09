@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <div className="flex flex-col md:flex-row gap-6 p-6 m-20">
+    <div className="flex flex-col md:flex-row gap-6 p-6 m-40">
       {/* Formulaire */}
       <div className="md:w-1/2">
         <h2 className="uppercase font-bold text-lg mb-4 text-center md:text-left">

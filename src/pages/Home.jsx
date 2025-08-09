@@ -2,17 +2,17 @@ import { useEffect, useState, useRef } from "react";
 import slider from "../assets/images/slider-bg.jpg";
 import services from "../data/services";
 import maçon from "../assets/images/about-img.jpg";
-import maison1 from "../assets/images/projects/project1.jpg"
-import maison2 from "../assets/images/projects/project2.jpg"
-import maison3 from "../assets/images/projects/project3.jpg"
-import maison4 from "../assets/images/projects/project4.jpg"
-import maison5 from "../assets/images/projects/project5.jpg"
-import maison6 from "../assets/images/projects/project6.jpg"
-import background from "../assets/images/client/client-bg.jpg"
-import clt from "../assets/images/client/client.jpg"
-import w1 from "../assets/images/w/w1.png"
-import w2 from "../assets/images/w/w2.png"
-import w3 from "../assets/images/w/w3.png"
+import maison1 from "../assets/images/projects/project1.jpg";
+import maison2 from "../assets/images/projects/project2.jpg";
+import maison3 from "../assets/images/projects/project3.jpg";
+import maison4 from "../assets/images/projects/project4.jpg";
+import maison5 from "../assets/images/projects/project5.jpg";
+import maison6 from "../assets/images/projects/project6.jpg";
+import background from "../assets/images/client/client-bg.jpg";
+import clt from "../assets/images/client/client.jpg";
+import w1 from "../assets/images/w/w1.png";
+import w2 from "../assets/images/w/w2.png";
+import w3 from "../assets/images/w/w3.png";
 import Contact from "./Contact";
 
 function Home() {
@@ -147,7 +147,8 @@ function Home() {
               PROJETS
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Filtre de catégorie toutes les réparations de peinture, de reconstruction et de style résidentiel
+              Filtre de catégorie toutes les réparations de peinture, de
+              reconstruction et de style résidentiel
             </p>
           </div>
           <Carousselle />
@@ -155,55 +156,55 @@ function Home() {
       </div>
       <Carousselle2 />
       <div className="max-w-4xl mx-auto my-16 px-4">
-  <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us?</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us?</h2>
 
-  <div className="space-y-8">
-    {/* Item */}
-    {[
-      { img: w1, title: "Project done on time" },
-      { img: w2, title: "Always available" },
-      { img: w3, title: "Professional and responsible" }
-    ].map((item, index) => (
-      <div
-        key={index}
-        className="flex flex-col md:flex-row items-center md:items-start gap-6"
-      >
-        {/* Icône avec flèche */}
-        <div className="relative">
-          <div className="bg-orange-500 w-24 h-24 flex items-center justify-center">
-            <img src={item.img} alt={item.title} className="w-10 h-10" />
-          </div>
-          {/* Pointe */}
-          <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:-right-3 md:top-1/2 md:-translate-y-1/2 
+        <div className="space-y-8">
+          {/* Item */}
+          {[
+            { img: w1, title: "Project done on time" },
+            { img: w2, title: "Always available" },
+            { img: w3, title: "Professional and responsible" },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col md:flex-row items-center md:items-start gap-6"
+            >
+              {/* Icône avec flèche */}
+              <div className="relative">
+                <div className="bg-orange-500 w-24 h-24 flex items-center justify-center">
+                  <img src={item.img} alt={item.title} className="w-10 h-10" />
+                </div>
+                {/* Pointe */}
+                <div
+                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:-right-3 md:top-1/2 md:-translate-y-1/2 
                           w-0 h-0 border-l-[12px] border-l-transparent border-t-[12px] md:border-t-transparent md:border-l-orange-500 
-                          border-t-orange-500 md:border-t-[12px] md:border-l-[12px]">
-          </div>
+                          border-t-orange-500 md:border-t-[12px] md:border-l-[12px]"
+                ></div>
+              </div>
+
+              {/* Texte */}
+              <div>
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="text-gray-700">
+                  Lorem Ipsum is not simply random text. It has roots in a piece
+                  of classical Latin literature from 45 BC, making it over 2000
+                  years old. Richard McClintock, a Latin professor at
+                  Hampden-Sydney College in Virginia, looked up one of the more
+                  obscure Latin words, consectetur, from a Lorem Ipsum passage.
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Texte */}
-        <div>
-          <h3 className="text-xl font-bold">{item.title}</h3>
-          <p className="text-gray-700">
-            Lorem Ipsum is not simply random text. It has roots in a piece of
-            classical Latin literature from 45 BC, making it over 2000 years
-            old. Richard McClintock, a Latin professor at Hampden-Sydney
-            College in Virginia, looked up one of the more obscure Latin words,
-            consectetur, from a Lorem Ipsum passage.
-          </p>
+        {/* Bouton */}
+        <div className="text-center mt-10">
+          <button className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition">
+            Read More
+          </button>
         </div>
       </div>
-    ))}
-  </div>
-
-  {/* Bouton */}
-  <div className="text-center mt-10">
-    <button className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition">
-      Read More
-    </button>
-  </div>
-</div>
-  <Contact />
-
+      <Contact />
     </div>
   );
 }
@@ -219,38 +220,44 @@ function Carousselle() {
       id: 1,
       image: maison1,
       title: "Travaux intérieur",
-      description: "Une altération sous une forme ou une autre, projection d'humour ou pas des mots aléatoires qui ne paraissent pas crédibles."
+      description:
+        "Une altération sous une forme ou une autre, projection d'humour ou pas des mots aléatoires qui ne paraissent pas crédibles.",
     },
     {
       id: 2,
       image: maison2,
       title: "Rénovation extérieure",
-      description: "Transformation complète de façades avec des matériaux modernes et durables pour un rendu exceptionnel."
+      description:
+        "Transformation complète de façades avec des matériaux modernes et durables pour un rendu exceptionnel.",
     },
     {
       id: 3,
       image: maison3,
       title: "Construction neuve",
-      description: "Projets de construction de maisons individuelles avec des designs contemporains et éco-responsables."
+      description:
+        "Projets de construction de maisons individuelles avec des designs contemporains et éco-responsables.",
     },
     {
       id: 4,
       image: maison4,
       title: "Aménagement paysager",
-      description: "Création d'espaces verts harmonieux alliant esthétique et fonctionnalité pour votre environnement."
+      description:
+        "Création d'espaces verts harmonieux alliant esthétique et fonctionnalité pour votre environnement.",
     },
     {
       id: 5,
       image: maison5,
       title: "Rénovation de toiture",
-      description: "Expertise en rénovation et réparation de toitures avec des matériaux de haute qualité."
+      description:
+        "Expertise en rénovation et réparation de toitures avec des matériaux de haute qualité.",
     },
     {
       id: 6,
       image: maison6,
       title: "Isolation thermique",
-      description: "Solutions d'isolation performantes pour améliorer le confort et réduire les consommations énergétiques."
-    }
+      description:
+        "Solutions d'isolation performantes pour améliorer le confort et réduire les consommations énergétiques.",
+    },
   ];
 
   // Auto-play functionality
@@ -258,7 +265,7 @@ function Carousselle() {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % projects.length);
+      setCurrentIndex((prev) => (prev + 1) % projects.length);
     }, 4000);
 
     return () => clearInterval(interval);
@@ -266,12 +273,12 @@ function Carousselle() {
 
   // Navigation functions
   const goToPrevious = () => {
-    setCurrentIndex(prev => prev === 0 ? projects.length - 1 : prev - 1);
+    setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
     setIsAutoPlaying(false);
   };
 
   const goToNext = () => {
-    setCurrentIndex(prev => (prev + 1) % projects.length);
+    setCurrentIndex((prev) => (prev + 1) % projects.length);
     setIsAutoPlaying(false);
   };
 
@@ -294,7 +301,7 @@ function Carousselle() {
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > 50;
     const isRightSwipe = distance < -50;
@@ -310,7 +317,7 @@ function Carousselle() {
   return (
     <div className="relative w-full">
       {/* Carrousel container */}
-      <div 
+      <div
         ref={carouselRef}
         className="relative overflow-hidden rounded-xl"
         onTouchStart={handleTouchStart}
@@ -320,11 +327,11 @@ function Carousselle() {
         onMouseLeave={() => setIsAutoPlaying(true)}
       >
         {/* Images container */}
-        <div 
+        <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div key={project.id} className="w-full flex-shrink-0">
               <div className="relative">
                 <img
@@ -345,8 +352,18 @@ function Carousselle() {
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
           aria-label="Image précédente"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
           </svg>
         </button>
 
@@ -355,8 +372,18 @@ function Carousselle() {
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
           aria-label="Image suivante"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
           </svg>
         </button>
 
@@ -367,12 +394,32 @@ function Carousselle() {
           aria-label={isAutoPlaying ? "Mettre en pause" : "Reprendre"}
         >
           {isAutoPlaying ? (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 9v6m4-6v6" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 9v6m4-6v6"
+              />
             </svg>
           ) : (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8"
+              />
             </svg>
           )}
         </button>
@@ -385,9 +432,9 @@ function Carousselle() {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentIndex 
-                ? 'bg-orange-500 w-8' 
-                : 'bg-gray-300 hover:bg-gray-400'
+              index === currentIndex
+                ? "bg-orange-500 w-8"
+                : "bg-gray-300 hover:bg-gray-400"
             }`}
             aria-label={`Aller au slide ${index + 1}`}
           />
@@ -396,10 +443,7 @@ function Carousselle() {
 
       {/* Project info - Only show for current slide */}
       <div className="mt-8 text-center">
-        <div 
-          key={currentIndex}
-          className="animate-fadeIn"
-        >
+        <div key={currentIndex} className="animate-fadeIn">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
             {projects[currentIndex].title}
           </h3>
@@ -411,7 +455,7 @@ function Carousselle() {
 
       {/* Progress bar */}
       <div className="mt-6 w-full bg-gray-200 rounded-full h-1">
-        <div 
+        <div
           className="bg-orange-500 h-1 rounded-full transition-all duration-100"
           style={{ width: `${((currentIndex + 1) / projects.length) * 100}%` }}
         />
@@ -467,7 +511,8 @@ function Carousselle2() {
   const [index, setIndex] = useState(0);
 
   const next = () => setIndex((index + 1) % testimonials.length);
-  const prev = () => setIndex((index - 1 + testimonials.length) % testimonials.length);
+  const prev = () =>
+    setIndex((index - 1 + testimonials.length) % testimonials.length);
 
   return (
     <div
@@ -500,7 +545,9 @@ function Carousselle2() {
             alt={testimonials[index].name}
             className="rounded-full w-32 h-32 object-cover absolute -top-16 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-lg"
           />
-          <div className="mt-16 text-2xl font-bold">{testimonials[index].name}</div>
+          <div className="mt-16 text-2xl font-bold">
+            {testimonials[index].name}
+          </div>
           <div className="text-orange-500 mb-5">{testimonials[index].role}</div>
           <div className="text-gray-700">{testimonials[index].text}</div>
         </div>
@@ -516,6 +563,5 @@ function Carousselle2() {
     </div>
   );
 }
-
 
 export default Home;
